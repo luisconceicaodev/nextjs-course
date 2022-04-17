@@ -1,3 +1,5 @@
+My first experience with Next.Js. Big thanks to Maximilian Schwarzmüller for his ["React - The Complete Guide"](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) course.
+---
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
