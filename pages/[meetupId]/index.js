@@ -58,9 +58,6 @@ export const getStaticProps = async (context) => {
 
 // hard codes the possible params that would be pre-generated and accounted for
 // paths => array of objects with the keys accounted as pre-generated
-// fallback => tells Next.Js whether my paths array has all supported parameter values or just some of them
-// fallback: false => my paths contains all id values / fallback: true => my paths contains only some id values
-// if false returns 404 page for unrecognized id values / if true will try to regenerate
 export const getStaticPaths = async () => {
   const client = await MongoClient.connect(
     `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@miguelcluster.fnavw.mongodb.net/meetups?retryWrites=true&w=majority`
@@ -75,8 +72,12 @@ export const getStaticPaths = async () => {
 
   client.close();
 
+  // fallback => tells Next.Js whether my paths array has all supported parameter values or just some of them
+  // fallback: false => my paths contains all id values / fallback: true => my paths contains only some id values
+  // fallback: 'blocking' the user won't see anything until the page is pre-generated and the finished page will be served
+  // if false returns 404 page for unrecognized id values / if true will try to regenerate
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
