@@ -1,0 +1,12 @@
+/* css .modules is a feature that allows you to scope css class styles to a react component  */
+/* import classes from css file  */
+/* <li className={classes.item}>  */
+/* picked up by Next.JS transforms the css so that the classes are unique to each component  */
+
+.detail {
+  text-align: center;
+}
+
+.detail img {
+  width: 100%;
+}
