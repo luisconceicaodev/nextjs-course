@@ -1,5 +1,12 @@
 My first experience with Next.Js. Big thanks to Maximilian Schwarzmüller for his ["React - The Complete Guide"](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) course.
+
 ---
+
+This code requires a MongoDB username and password. If you want to run this you'll need to use your own MongoDB Cluster with your own users. 
+Alternatively you can contact me and I can get you a user for testing purposes.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
